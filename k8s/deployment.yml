@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: jquery
-        image: 795118656430.dkr.ecr.us-east-2.amazonaws.com/jquery-eks:"${JOB_NAME}-${BUILD_NUMBER}"
+        image: 795118656430.dkr.ecr.us-east-2.amazonaws.com/jquery-eks:number
         ports:
         - containerPort: 80
