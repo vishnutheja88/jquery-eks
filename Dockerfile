@@ -1,2 +1,2 @@
 FROM httpd
-COPY . /usr/loca/apach2/htdocs/
+COPY . /usr/local/apach2/htdocs/
