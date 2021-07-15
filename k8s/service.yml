@@ -1,13 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: jquery
+  name: k8s-jquery-svc
   namespace: jquery
 spec:
-  selector:
+  selector: 
     app: jquery
   ports:
-    protocol: TCP
-    port: 80
-    targetPort: 80
-  type: LoadBalancer
+    - protocol: TCP
+      port: 80
+      targetPort: 80
