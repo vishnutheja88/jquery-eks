@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  k8-jquery-static
+  namespace: jquery
+spec:
+  selector:
+    matchLabels:
+      app: jquery
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app:  jquery
+    spec:
+      containers:
+      - name:  jquery
+        image:  795118656430.dkr.ecr.us-east-2.amazonaws.com/jquery-eks:"${JOB_NAME}-${BUILD_NUMBER}"
+        ports:
+        - containerPort:  80
