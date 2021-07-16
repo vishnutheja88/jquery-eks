@@ -1,10 +1,9 @@
 #FROM httpd
 #MAINTAINER vishnutheja
 #COPY . /usr/local/apache2/htdocs/
-FROM php:7.0-apache
+FROM centos:latest
 
-RUN apt-get update && \
-    apt-get install -y php5-mysql && \
-    apt-get clean
-
+RUN yum -y install httpd
 COPY . /var/www/html/
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+EXPOSE 80
