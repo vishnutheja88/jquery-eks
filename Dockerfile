@@ -1,3 +1,3 @@
 FROM httpd
 MAINTAINER vishnutheja
-COPY . /usr/local/apach2/htdocs/
+COPY . /usr/local/apache2/htdocs/
