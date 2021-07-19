@@ -7,7 +7,7 @@ metadata:
    kubernetes.io/ingress.class: nginx
 spec:
  rules:
- - host: dev-jquery.premdesigns.in
+ - host: dev-jquery.rsrinfotech.co.in
    http:
      paths:
      - path:
